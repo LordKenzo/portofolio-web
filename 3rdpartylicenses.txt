@@ -1,5 +1,3 @@
-angular-bootstrap-md
-
 tslib
 Apache-2.0
 Apache License
@@ -278,6 +276,11 @@ MIT
 MIT
 
 @angular/forms
+MIT
+
+angular-bootstrap-md
+
+@angular/animations
 MIT
 
 @angular/service-worker
