@@ -1,0 +1,36 @@
+@import 'variables';
+@import 'mixin';
+.card {
+  position: relative;
+  min-height: 300px;
+  max-width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2rem;
+  box-shadow: 2px 5px 19px 3px rgba(0, 0, 0, 0.48);
+  @include clearfix;
+  &__header {
+    color: #fff;
+    min-height: 90px;
+    background: linear-gradient(to right, $quaternary-color 0%, #0e0e0e 100%);
+  }
+  &__body {
+    color: #000;
+    min-height: 460px;
+    padding-top: 200px;
+
+    background-color: #fff;
+  }
+  &__image-box {
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    img {
+      border: 0.6rem solid #fff;
+      max-width: 200px;
+      border-radius: 100%;
+    }
+  }
+}
