@@ -40,7 +40,7 @@
 }
 */
 @mixin create-mq($breakpoint) {
-  @if($breakpoint == 0) {
+  @if ($breakpoint == 0) {
     @content;
   } @else {
     @media screen and (min-width: $breakpoint * 1px) {
@@ -50,7 +50,7 @@
 }
 
 @mixin set-font($breakpoint, $size-factor, $base-font) {
-  @if($breakpoint == 0) {
+  @if ($breakpoint == 0) {
     @content;
   } @else {
     @media screen and (min-width: $breakpoint * 1px) {
@@ -65,11 +65,14 @@
       margin-left: 0;
     }
     @for $i from 1 through $grid-cols {
-      &__col#{$modifier}-#{$i} {
-        flex-basis: (100 / ($grid-cols / $i) ) * 1%;
+      &__col#{$modifier}-#{$i}:not(:last-child) {
+        flex-basis: (100 / ($grid-cols / $i)) * 1% - 2.1%;
+      }
+      &__col#{$modifier}-#{$i}:last-child {
+        flex-basis: (100 / ($grid-cols / $i)) * 1% - 1.8%;
       }
       &__col#{$modifier}-offset-#{$i} {
-        margin-left: (100 / ($grid-cols / $i) ) * 1%;
+        margin-left: (100 / ($grid-cols / $i)) * 1%;
       }
     }
   }

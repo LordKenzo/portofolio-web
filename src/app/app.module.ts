@@ -14,6 +14,8 @@ import { NavComponent } from './header/nav/nav.component';
 import { BannerComponent } from './banner/banner.component';
 import { NotFoundComponent } from './page-not-found.component';
 import { FooterComponent } from './footer/footer.component';
+import { SkillComponent } from './home/skill/skill.component';
+import { CardComponent } from './home/card/card.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { FooterComponent } from './footer/footer.component';
     NavComponent,
     BannerComponent,
     HomeComponent,
+    CardComponent,
+    SkillComponent,
     FooterComponent,
     NotFoundComponent,
     FixHeaderDirective,

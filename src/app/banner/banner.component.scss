@@ -8,14 +8,13 @@
   min-height: 45rem;
   background-image: linear-gradient(
       to right bottom,
-      rgba(189, 248, 177, .2),
-      rgba(245, 110, 110, .6)
+      rgba(189, 248, 177, 0.2),
+      rgba(245, 110, 110, 0.6)
     ),
     url(~src/assets/images/bg001.jpg);
   background-size: cover;
   background-position: bottom;
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
-
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   &__text-content {
     margin-top: 8rem;
     position: absolute;
@@ -47,7 +46,7 @@
     @include large-desktop {
       font-size: 5.8rem;
     }*/
-    @each $modifier , $breakpoint in $map-grid {
+    @each $modifier, $breakpoint in $map-grid {
       @include set-font($breakpoint, 50, 3.8);
     }
     &--secondary-color {
@@ -64,7 +63,7 @@
   }
   &__description {
     color: $tertiary-color;
-    background-color:rgba($color-white, .90);
+    background-color: rgba($color-white, 0.9);
     border-radius: 5px;
     font-size: 1.6rem;
     @include create-mq($bp-sm) {
