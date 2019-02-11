@@ -1,0 +1,83 @@
+@import 'abstract/variables';
+@import 'abstract/mixin';
+@import 'base/animation';
+
+.large-banner {
+  position: relative;
+  height: 95vh;
+  min-height: 45rem;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(189, 248, 177, .2),
+      rgba(245, 110, 110, .6)
+    ),
+    url(~src/assets/images/bg001.jpg);
+  background-size: cover;
+  background-position: bottom;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+
+  &__text-content {
+    margin-top: 8rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-100%);
+    @include create-mq($bp-sm) {
+      transform: translateY(-70%);
+    }
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+    color: $primary-color;
+  }
+  &__title {
+    font-size: 3.8rem;
+    text-shadow: 1px 2px 0 rgba(50, 0, 0, 0.3);
+    animation: moveFromTop 1s ease-in;
+    backface-visibility: hidden;
+    /*@include tablet-portait {
+      font-size: 4.2rem;
+    }
+    @include tablet-landscape {
+      font-size: 4.8rem;
+    }
+    @include desktop {
+      font-size: 5.2rem;
+    }
+    @include large-desktop {
+      font-size: 5.8rem;
+    }*/
+    @each $modifier , $breakpoint in $map-grid {
+      @include set-font($breakpoint, 50, 3.8);
+    }
+    &--secondary-color {
+      color: lighten($primary-color, 50%);
+    }
+  }
+  &__subtitle {
+    font-size: 2rem;
+    text-shadow: 1px 2px 0 rgba(50, 0, 0, 0.3);
+    color: #fff;
+    @include create-mq($bp-sm) {
+      font-size: 2.8rem;
+    }
+  }
+  &__description {
+    color: $tertiary-color;
+    background-color:rgba($color-white, .90);
+    border-radius: 5px;
+    font-size: 1.6rem;
+    @include create-mq($bp-sm) {
+      font-size: 1.875rem;
+    }
+    font-weight: 100;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    max-width: 45rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &--bg {
+    max-width: 35rem;
+    background-color: rgba(66, 60, 60, 0.486);
+  }
+}

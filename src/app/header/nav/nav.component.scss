@@ -1,0 +1,25 @@
+@import 'abstract/variables';
+@import 'abstract/mixin';
+.primary-nav {
+  &--pull-right {
+    float: right;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    @include clearfix;
+  }
+  li {
+    list-style: none;
+    float: left;
+    padding-right: 2rem;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 1.6rem;
+    padding: 0.5rem 0;
+  }
+}
+

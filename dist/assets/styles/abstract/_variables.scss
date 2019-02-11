@@ -1,0 +1,31 @@
+
+// COLORS
+$primary-color: #4f698b;
+$secondary-color: #f19f34;
+$tertiary-color: #aa7b86;
+$quaternary-color: #e75069;
+$color-dark-grey: #333;
+$color-black: #000;
+$color-white: #fff;
+/*
+BOOTSTRAP BREAKPOINTS
+0-576px: default
+576px-768px: Tablet portrait (sm)
+768-992px: Tablet landscape (md)
+992px- 1200px: Desktop (lg)
+1200px-+inf: Large Desktop (xl)
+*/
+// GRID
+$max-grid-width: 76.8rem;
+$bp-sm: 576;
+$bp-md: 768;
+$bp-lg: 992;
+$bp-xl: 1200;
+$map-grid: (
+  '': 0,
+  '-sm': $bp-sm,
+  '-md': $bp-md,
+  '-lg': $bp-lg,
+  '-xl': $bp-xl
+);
+$grid-cols: 12;

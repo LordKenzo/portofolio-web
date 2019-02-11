@@ -1,0 +1,76 @@
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+// Media Query Manager
+
+/*
+0-600px: default
+600px-900px: Tablet portrait
+900px-1200px: Tablet landscape
+1200px- 1800px: Desktop
+1800px-+inf: Large Desktop
+*/
+/*
+@mixin tablet-portait {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+*/
+@mixin create-mq($breakpoint) {
+  @if($breakpoint == 0) {
+    @content;
+  } @else {
+    @media screen and (min-width: $breakpoint * 1px) {
+      @content;
+    }
+  }
+}
+
+@mixin set-font($breakpoint, $size-factor, $base-font) {
+  @if($breakpoint == 0) {
+    @content;
+  } @else {
+    @media screen and (min-width: $breakpoint * 1px) {
+      font-size: $base-font * ($breakpoint / $size-factor) * 1px;
+    }
+  }
+}
+
+@mixin create-col-classes($modifier, $grid-cols, $breakpoint) {
+  @include create-mq($breakpoint) {
+    &__col#{$modifier}-offset-0 {
+      margin-left: 0;
+    }
+    @for $i from 1 through $grid-cols {
+      &__col#{$modifier}-#{$i} {
+        flex-basis: (100 / ($grid-cols / $i) ) * 1%;
+      }
+      &__col#{$modifier}-offset-#{$i} {
+        margin-left: (100 / ($grid-cols / $i) ) * 1%;
+      }
+    }
+  }
+}
