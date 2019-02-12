@@ -20,8 +20,12 @@
       display: flex;
       align-items: center;
       justify-content: space-around;
-      &:not(:last-child) {
-        margin-right: 20px;
+      margin-bottom: 2.5rem;
+      @include create-mq($bp-sm) {
+        &:not(:last-child) {
+          margin-right: 20px;
+
+        }
       }
     }
   }

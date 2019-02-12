@@ -4,7 +4,9 @@
 
 .large-banner {
   position: relative;
-  height: 95vh;
+  @include create-mq($bp-sm) {
+    height: 95vh;
+  }
   min-height: 45rem;
   background-image: linear-gradient(
       to right bottom,
@@ -14,12 +16,12 @@
     url(~src/assets/images/bg001.jpg);
   background-size: cover;
   background-position: bottom;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
   &__text-content {
     margin-top: 8rem;
     position: absolute;
     top: 50%;
-    transform: translateY(-100%);
+    transform: translateY(-85%);
     @include create-mq($bp-sm) {
       transform: translateY(-70%);
     }

@@ -1,6 +1,27 @@
 body {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
   line-height: 1.7;
   color: $primary-color;
+}
+
+.heading {
+  &--title {
+    font-size: 2rem;
+    @each $modifier, $breakpoint in $map-grid {
+      @include set-font($breakpoint, 50, 2);
+    }
+  }
+  &--subtitle {
+    font-size: 1.6rem;
+    @each $modifier, $breakpoint in $map-grid {
+      @include set-font($breakpoint, 70, 2);
+    }
+  }
+  &--tertiary {
+    font-size: 1.2rem;
+    @each $modifier, $breakpoint in $map-grid {
+      @include set-font($breakpoint, 70, 1.2);
+    }
+  }
 }

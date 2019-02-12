@@ -1,4 +1,3 @@
-
 // COLORS
 $primary-color: #4f698b;
 $secondary-color: #f19f34;
@@ -16,7 +15,7 @@ BOOTSTRAP BREAKPOINTS
 1200px-+inf: Large Desktop (xl)
 */
 // GRID
-$max-grid-width: 76.8rem;
+$max-grid-width: 99.2rem;
 $bp-sm: 576;
 $bp-md: 768;
 $bp-lg: 992;
@@ -26,6 +25,6 @@ $map-grid: (
   '-sm': $bp-sm,
   '-md': $bp-md,
   '-lg': $bp-lg,
-  '-xl': $bp-xl
+  '-xl': $bp-xl,
 );
 $grid-cols: 12;
