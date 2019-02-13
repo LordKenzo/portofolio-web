@@ -5,11 +5,18 @@
   margin-top: 10rem;
   color: $color-white;
   background-color: $tertiary-color;
-  padding: 20rem 0;
-  font-size: 1.4rem;
+  padding: 25rem 0 10rem 0;
+  font-size: 1.8rem;
+
+
   &__logo-box {
+    font-family: 'Indie Flower';
+    font-size: 8rem;
     text-align: center;
-    margin-bottom: 8rem;
+    margin-bottom: 30rem;
+  }
+  &__heart {
+    color: red;
   }
   &__logo {
     width: 15 rem;
